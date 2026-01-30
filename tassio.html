@@ -1,0 +1,1264 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encanto em Fios - Modelos Exclusivos de Crochê que Vendem</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            /* Paleta Captei aplicada */
+            --offwhite: #FFFBF7;   /* Creme quente (bg-body) */
+            --cream: #F9F5F2;      /* Variação sutil */
+            --warm-brown: #8E6E5D; /* Marrom médio (brand-warm) */
+            --deep-brown: #5C4033; /* Café profundo (primary) */
+            --sage: #2D5A27;       /* Verde Sucesso */
+            --terracotta: #D4A373; /* Substituído pelo Dourado Suave (accent) */
+            --soft-gold: #D4A373;  /* Dourado Suave */
+            --shadow: rgba(92, 64, 51, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--offwhite);
+            color: var(--deep-brown);
+            line-height: 1.7;
+            overflow-x: hidden;
+        }
+
+        /* Textura de fundo sutil */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(142, 110, 93, 0.03) 2px,
+                    rgba(142, 110, 93, 0.03) 4px
+                ),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(142, 110, 93, 0.03) 2px,
+                    rgba(142, 110, 93, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            letter-spacing: -2.0px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 30px;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Header */
+        header {
+            padding: 30px 0;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 251, 247, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            border-bottom: 1px solid rgba(142, 110, 93, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 33px;
+            font-weight: 600;
+            color: var(--deep-brown);
+            letter-spacing: -2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--deep-brown);
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--terracotta);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .btn-login {
+            padding: 12px 30px;
+            background: transparent;
+            border: 2px solid var(--deep-brown);
+            color: var(--deep-brown);
+            text-decoration: none;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .btn-login:hover {
+            background: var(--deep-brown);
+            color: var(--offwhite);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 120px 0;
+            text-align: center;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '\f518'; /* Icone de novelo fontawesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 50px;
+            left: 10%;
+            font-size: 80px;
+            opacity: 0.05;
+            color: var(--deep-brown);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .hero::after {
+            content: '\e088'; /* Icone de brilho fontawesome */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            bottom: 100px;
+            right: 15%;
+            font-size: 60px;
+            opacity: 0.05;
+            color: var(--terracotta);
+            animation: float 8s ease-in-out infinite;
+            animation-delay: 2s;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero h1 {
+            font-size: 64px;
+            line-height: 1.1;
+            margin-bottom: 30px;
+            color: var(--deep-brown);
+            animation: fadeInUp 1s ease-out;
+            font-weight: 800;
+        }
+
+        .hero-subtitle {
+            font-size: 24px;
+            color: var(--warm-brown);
+            margin-bottom: 50px;
+            font-weight: 500;
+            animation: fadeInUp 1s ease-out 0.2s;
+            animation-fill-mode: backwards;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            animation: fadeInUp 1s ease-out 0.4s;
+            animation-fill-mode: backwards;
+        }
+
+        .btn-primary, .btn-secondary {
+            padding: 18px 45px;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: all 0.4s ease;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            position: relative;
+            overflow: hidden;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .btn-primary {
+            background: var(--deep-brown); /* Café */
+            color: var(--offwhite);
+            border: none;
+            box-shadow: 0 10px 30px rgba(92, 64, 51, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            background: var(--warm-brown);
+            box-shadow: 0 15px 40px rgba(92, 64, 51, 0.4);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--deep-brown);
+            border: 2px solid var(--deep-brown);
+        }
+
+        .btn-secondary:hover {
+            background: var(--deep-brown);
+            color: var(--offwhite);
+        }
+
+        .hero-demo {
+            margin-top: 80px;
+            border-radius: 32px;
+            overflow: hidden;
+            box-shadow: 0 30px 80px var(--shadow);
+            animation: fadeInUp 1s ease-out 0.6s;
+            animation-fill-mode: backwards;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid rgba(139, 115, 85, 0.15);
+        }
+
+        .demo-placeholder {
+            background: linear-gradient(135deg, var(--warm-brown) 0%, var(--deep-brown) 100%);
+            height: 500px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--offwhite);
+            font-size: 24px;
+            font-weight: 700;
+        }
+
+        /* Problem Section */
+        .problem-section {
+            padding: 100px 0;
+            background: #F4EFEC;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 48px;
+            text-align: center;
+            margin-bottom: 20px;
+            color: var(--deep-brown);
+            font-weight: 800;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            font-size: 20px;
+            color: var(--warm-brown);
+            margin-bottom: 80px;
+            font-weight: 500;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .problem-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            border-left: 6px solid var(--terracotta);
+            box-shadow: 0 10px 30px var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .problem-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .problem-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--deep-brown);
+            font-weight: 700;
+        }
+
+        .problem-card p {
+            font-size: 16px;
+            color: var(--warm-brown);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Solution Section */
+        .solution-section {
+            padding: 100px 0;
+        }
+
+        .solution-intro {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 80px;
+        }
+
+        .solution-intro h2 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: var(--deep-brown);
+            font-weight: 800;
+        }
+
+        .solution-intro p {
+            font-size: 22px;
+            color: var(--warm-brown);
+            line-height: 1.6;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 50px;
+        }
+
+        .feature-card {
+            position: relative;
+            padding: 50px 40px;
+            background: linear-gradient(135deg, #fff 0%, var(--cream) 100%);
+            border-radius: 24px;
+            box-shadow: 0 15px 40px var(--shadow);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(139, 115, 85, 0.1);
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(135deg, var(--terracotta), var(--deep-brown));
+            border-radius: 24px;
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: -1;
+        }
+
+        .feature-card:hover::before {
+            opacity: 1; /* Borda destaca */
+        }
+        
+        /* Ajuste para o fundo cobrir a borda interna ao hover */
+        .feature-card:hover {
+             background: #fff;
+             transform: translateY(-10px);
+             box-shadow: 0 20px 50px rgba(92, 64, 51, 0.15);
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            color: var(--deep-brown);
+        }
+
+        .feature-card h3 {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: var(--deep-brown);
+            font-weight: 700;
+        }
+
+        .feature-card p {
+            font-size: 16px;
+            color: var(--warm-brown);
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        /* Benefits Section */
+        .benefits-section {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .benefits-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 60px;
+        }
+
+        .benefit-item {
+            background: #fff;
+            padding: 30px;
+            border-radius: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid rgba(139, 115, 85, 0.1);
+        }
+
+        .benefit-item:hover {
+            box-shadow: 0 10px 30px var(--shadow);
+            transform: translateX(5px);
+            border-color: var(--terracotta);
+        }
+
+        .benefit-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+            color: var(--terracotta);
+        }
+
+        .benefit-content h4 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: var(--deep-brown);
+            font-weight: 700;
+        }
+
+        .benefit-content p {
+            font-size: 14px;
+            color: var(--warm-brown);
+            font-weight: 500;
+        }
+
+        /* Pricing Section */
+        .pricing-section {
+            padding: 120px 0;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .pricing-card {
+            background: #fff;
+            border-radius: 32px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 60px var(--shadow);
+            transition: all 0.4s ease;
+            position: relative;
+            border: 2px solid transparent;
+        }
+
+        .pricing-card.popular {
+            border-color: var(--deep-brown);
+            transform: scale(1.05);
+            background: #FFFEFC;
+        }
+
+        .pricing-card.popular::before {
+            content: 'MAIS POPULAR';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--deep-brown);
+            color: var(--offwhite);
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card.best-value {
+            border-color: var(--terracotta);
+        }
+
+        .pricing-card.best-value::before {
+            content: 'MELHOR CUSTO-BENEFÍCIO';
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--terracotta);
+            color: var(--deep-brown);
+            padding: 8px 25px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 80px rgba(92, 64, 51, 0.15);
+        }
+
+        .plan-name {
+            font-size: 28px;
+            margin-bottom: 15px;
+            color: var(--deep-brown);
+            font-weight: 700;
+        }
+
+        .plan-price {
+            font-size: 56px;
+            font-weight: 800;
+            color: var(--deep-brown);
+            margin-bottom: 10px;
+        }
+
+        .plan-period {
+            font-size: 16px;
+            color: var(--warm-brown);
+            margin-bottom: 30px;
+            font-weight: 500;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 40px;
+        }
+
+        .plan-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(139, 115, 85, 0.1);
+            font-size: 15px;
+            color: var(--warm-brown);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .plan-features li::before {
+            content: '\f00c'; /* Check icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: var(--sage);
+            font-size: 16px;
+        }
+
+        .btn-plan {
+            width: 100%;
+            padding: 18px;
+            background: var(--deep-brown);
+            color: var(--offwhite);
+            text-decoration: none;
+            border-radius: 50px;
+            font-size: 18px;
+            text-align: center;
+            display: block;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        .btn-plan:hover {
+            background: var(--terracotta);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(92, 64, 51, 0.2);
+            color: var(--deep-brown);
+        }
+
+        .guarantee {
+            margin-top: 80px;
+            text-align: center;
+            padding: 40px;
+            background: var(--deep-brown);
+            border-radius: 24px;
+            color: var(--offwhite);
+        }
+
+        .guarantee h3 {
+            font-size: 28px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .guarantee p {
+            font-size: 18px;
+            line-height: 1.6;
+            opacity: 0.9;
+        }
+
+        /* Testimonials Section */
+        .testimonials-section {
+            padding: 100px 0;
+            background: var(--cream);
+        }
+
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .testimonial-card {
+            background: #fff;
+            padding: 40px;
+            border-radius: 24px;
+            box-shadow: 0 15px 40px var(--shadow);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '\f10d'; /* Quote icon */
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            font-size: 40px;
+            color: var(--terracotta);
+            opacity: 0.2;
+        }
+
+        .testimonial-text {
+            font-size: 16px;
+            line-height: 1.8;
+            color: var(--warm-brown);
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 1;
+            font-weight: 500;
+            padding-top: 20px;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .author-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--deep-brown), var(--terracotta));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--offwhite);
+            font-size: 20px;
+            font-weight: 700;
+        }
+
+        .author-info h4 {
+            font-size: 18px;
+            color: var(--deep-brown);
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+
+        .author-info p {
+            font-size: 14px;
+            color: var(--warm-brown);
+            font-style: italic;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            padding: 120px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--terracotta) 0%, var(--deep-brown) 100%);
+            color: var(--offwhite);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+            animation: pulse 15s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 0.5; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 56px;
+            margin-bottom: 30px;
+            font-weight: 800;
+        }
+
+        .cta-section p {
+            font-size: 22px;
+            margin-bottom: 50px;
+            opacity: 0.95;
+            font-weight: 500;
+        }
+
+        .cta-section .btn-primary {
+            background: var(--offwhite);
+            color: var(--deep-brown);
+            font-size: 20px;
+            padding: 22px 60px;
+        }
+
+        .cta-section .btn-primary:hover {
+            background: var(--cream);
+            color: var(--deep-brown);
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--deep-brown);
+            color: var(--offwhite);
+            padding: 80px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 50px;
+            margin-bottom: 50px;
+        }
+
+        .footer-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            color: var(--terracotta);
+            font-weight: 800;
+        }
+
+        .footer-section p {
+            font-size: 15px;
+            line-height: 1.8;
+            opacity: 0.8;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+
+        .footer-links a {
+            color: var(--offwhite);
+            text-decoration: none;
+            opacity: 0.8;
+            transition: opacity 0.3s ease;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+            color: var(--terracotta);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            opacity: 0.7;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .section-title {
+                font-size: 36px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+
+            .features-grid,
+            .pricing-grid,
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">Encanto em Fios</div>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#solucao">O Aplicativo</a></li>
+                    <li><a href="#planos">Planos</a></li>
+                    <li><a href="#depoimentos">Depoimentos</a></li>
+                </ul>
+                <a href="#" class="btn-login">Entrar</a>
+            </nav>
+        </div>
+    </header>
+
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>Crie Peças de Crochê<br>que Realmente Vendem</h1>
+            <p class="hero-subtitle">Modelos exclusivos, tendências do mercado e diagramas facilitados<br>tudo em um só aplicativo</p>
+            
+            <div class="cta-buttons">
+                <a href="#planos" class="btn-primary">Testar Agora</a>
+                <a href="#solucao" class="btn-secondary">Ver Como Funciona</a>
+            </div>
+
+            <div class="hero-demo">
+                <div class="demo-placeholder">
+                    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWM4cjg0bmIxMW56bWRmMXlpM3A5OG9xeHFlNGxibzFqdXd6Y3BtMSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TTjVLy6zHbwncTB5lb/giphy.gif" >
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="problem-section">
+        <div class="container">
+            <h2 class="section-title">Você Cria, mas Não Vende?</h2>
+            <p class="section-subtitle">Sabemos exatamente o que você está enfrentando</p>
+
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <h3>Peças Encalhadas</h3>
+                    <p>Você dedica tempo e investimento criando peças lindas, mas elas ficam paradas sem compradores, gerando prejuízo e frustração.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Falta de Direção</h3>
+                    <p>Não sabe quais modelos estão em alta no mercado e acaba criando produtos que ninguém procura.</p>
+                </div>
+
+                <div class="problem-card">
+                    <h3>Dificuldade Técnica</h3>
+                    <p>Receitas confusas, diagramas complicados e falta de suporte tornam cada projeto um desafio maior do que deveria ser.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucao" class="solution-section">
+        <div class="container">
+            <div class="solution-intro">
+                <h2>Seu Netflix de Modelos<br>que Vendem</h2>
+                <p>O Encanto em Fios é o primeiro aplicativo que une modelos exclusivos, tendências de mercado e facilidade técnica em uma única plataforma.</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                    <h3>Modelos Sempre Novos</h3>
+                    <p>20 modelos exclusivos toda semana, incluindo peças usadas por celebridades como Ivete Sangalo. Uma biblioteca em constante atualização, como sua série favorita.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-chart-line"></i></div>
+                    <h3>Inteligência de Mercado</h3>
+                    <p>Descubra o que está vendendo agora: vestidos, bolsas, amigurumis, tapetes. O aplicativo mostra exatamente o que o mercado está procurando.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-yarn"></i></div>
+                    <h3>Diagramas Facilitados</h3>
+                    <p>Passo a passo claro e detalhado com diagramas que funcionam tanto para iniciantes quanto para crocheteiras avançadas.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                    <h3>Coleções Exclusivas</h3>
+                    <p>Acesso a modelos que você não encontra em nenhum outro lugar. Peças únicas que destacam seu trabalho da concorrência.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bullseye"></i></div>
+                    <h3>Inspirações Baseadas em Dados</h3>
+                    <p>Veja tendências por categoria: infantil, feminino, acessórios, decoração. Saiba exatamente onde investir seu tempo.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-robot"></i></div>
+                    <h3>Criador com IA</h3>
+                    <p>Crie suas próprias receitas com auxílio de inteligência artificial. Transforme ideias em projetos reais.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits-section">
+        <div class="container">
+            <h2 class="section-title">Tudo que Você Precisa<br>em Um Só Lugar</h2>
+
+            <div class="benefits-list">
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="benefit-content">
+                        <h4>Grupo de Parceiras</h4>
+                        <p>Comunidade exclusiva para trocar experiências e dicas</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
+                    <div class="benefit-content">
+                        <h4>Interface Intuitiva</h4>
+                        <p>Aplicativo fácil de usar, sem complicação</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-comments"></i></div>
+                    <div class="benefit-content">
+                        <h4>Suporte Prioritário</h4>
+                        <p>Ajuda rápida quando você precisar</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-arrow-up-1-9"></i></div>
+                    <div class="benefit-content">
+                        <h4>Contador de Pontos</h4>
+                        <p>Nunca mais perca a conta dos pontos</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-ruler"></i></div>
+                    <div class="benefit-content">
+                        <h4>Calculadora de Medidas</h4>
+                        <p>Ajuste qualquer receita para o tamanho desejado</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-map-pin"></i></div>
+                    <div class="benefit-content">
+                        <h4>"Onde Parei"</h4>
+                        <p>Retome seus projetos exatamente de onde parou</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-book-open"></i></div>
+                    <div class="benefit-content">
+                        <h4>Dicionário de Termos</h4>
+                        <p>Entenda qualquer termo técnico na hora</p>
+                    </div>
+                </div>
+
+                <div class="benefit-item">
+                    <div class="benefit-icon"><i class="fa-solid fa-palette"></i></div>
+                    <div class="benefit-content">
+                        <h4>Todas as Categorias</h4>
+                        <p>Infantil, feminino, bolsas, amigurumis, tapetes e mais</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="planos" class="pricing-section">
+        <div class="container">
+            <h2 class="section-title">Escolha Seu Plano</h2>
+            <p class="section-subtitle">Todos os planos têm acesso completo a todas as funcionalidades</p>
+
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <h3 class="plan-name">Mensal</h3>
+                    <div class="plan-price">R$ 47</div>
+                    <p class="plan-period">por mês</p>
+                    
+                    <ul class="plan-features">
+                        <li>20 modelos exclusivos por mês</li>
+                        <li>Tendências de mercado em tempo real</li>
+                        <li>Diagramas facilitados</li>
+                        <li>Criador de receitas com IA</li>
+                        <li>Grupo de parceiras</li>
+                        <li>Suporte prioritário</li>
+                        <li>Todas as ferramentas incluídas</li>
+                        <li>Cancele quando quiser</li>
+                    </ul>
+
+                    <a href="#" class="btn-plan">Começar Agora</a>
+                </div>
+
+                <div class="pricing-card popular">
+                    <h3 class="plan-name">Trimestral</h3>
+                    <div class="plan-price">R$ 127</div>
+                    <p class="plan-period">a cada 3 meses · R$ 42,33/mês</p>
+                    
+                    <ul class="plan-features">
+                        <li>20 modelos exclusivos por mês</li>
+                        <li>Tendências de mercado em tempo real</li>
+                        <li>Diagramas facilitados</li>
+                        <li>Criador de receitas com IA</li>
+                        <li>Grupo de parceiras</li>
+                        <li>Suporte prioritário</li>
+                        <li>Todas as ferramentas incluídas</li>
+                        <li>Cancele quando quiser</li>
+                    </ul>
+
+                    <a href="#" class="btn-plan">Começar Agora</a>
+                </div>
+
+                <div class="pricing-card best-value">
+                    <h3 class="plan-name">Vitalício</h3>
+                    <div class="plan-price">R$ 197</div>
+                    <p class="plan-period">pagamento único · acesso para sempre</p>
+                    
+                    <ul class="plan-features">
+                        <li>20 modelos exclusivos por mês</li>
+                        <li>Tendências de mercado em tempo real</li>
+                        <li>Diagramas facilitados</li>
+                        <li>Criador de receitas com IA</li>
+                        <li>Grupo de parceiras</li>
+                        <li>Suporte prioritário</li>
+                        <li>Todas as ferramentas incluídas</li>
+                        <li>Acesso vitalício garantido</li>
+                    </ul>
+
+                    <a href="#" class="btn-plan">Começar Agora</a>
+                </div>
+            </div>
+
+            <div class="guarantee">
+                <h3><i class="fa-solid fa-shield-halved"></i> Garantia Incondicional de 7 Dias</h3>
+                <p>Teste o Encanto em Fios por 7 dias. Se não gostar por qualquer motivo, devolvemos 100% do seu dinheiro. Simples assim.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="depoimentos" class="testimonials-section">
+        <div class="container">
+            <h2 class="section-title">O Que Nossas Crocheteiras Dizem</h2>
+
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Antes do Encanto em Fios eu criava peças lindas que ninguém comprava. Agora, usando os modelos de tendência do app, tudo que faço sai em menos de uma semana. Meu faturamento triplicou!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>Maria Clara</h4>
+                            <p>Crocheteira há 3 anos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">Sou iniciante e tinha muito medo de errar. Os diagramas do Encanto em Fios são tão claros que consegui fazer minha primeira bolsa em 2 dias. E já tenho 3 encomendas!</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AS</div>
+                        <div class="author-info">
+                            <h4>Ana Silva</h4>
+                            <p>Começou há 4 meses</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p class="testimonial-text">O que mais me impressionou foi ver que uma peça que Ivete Sangalo usou estava no aplicativo. Fiz igual e vendi 5 em uma semana! É incrível ter acesso a modelos de celebridades.</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JO</div>
+                        <div class="author-info">
+                            <h4>Juliana Oliveira</h4>
+                            <p>Empreendedora de crochê</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Comece a Criar Peças<br>que Vendem Hoje</h2>
+                <p>Junte-se a centenas de crocheteiras que transformaram<br>sua paixão em um negócio lucrativo</p>
+                <a href="#planos" class="btn-primary">Quero Começar Agora</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Encanto em Fios</h3>
+                    <p>O aplicativo que transforma crocheteiras em empreendedoras de sucesso.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#inicio">Início</a></li>
+                        <li><a href="#solucao">O Aplicativo</a></li>
+                        <li><a href="#planos">Planos</a></li>
+                        <li><a href="#depoimentos">Depoimentos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Suporte</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Central de Ajuda</a></li>
+                        <li><a href="#">Perguntas Frequentes</a></li>
+                        <li><a href="#">Contato</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Legal</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Política de Reembolso</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2025 Encanto em Fios. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scroll para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animação de fade-in ao scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.feature-card, .benefit-item, .pricing-card, .testimonial-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+            observer.observe(el);
+        });
+
+        document.addEventListener('mouseleav', function(e){
+            if (e.clienty < 0) {
+                windows.location.href = "google.com.br";
+            }
+        });
+    
+    </script>
+</body>
+</html>
