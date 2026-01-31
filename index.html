@@ -11,7 +11,6 @@
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Meta Pixel Code -->
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -27,26 +26,21 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=1588924362118875&ev=PageView&noscript=1"
     /></noscript>
-    <!-- End Meta Pixel Code -->
-
     <style>
         :root {
-            /* Paleta Base */
             --offwhite: #FFFBF7;
             --cream: #F9F5F2;
             --warm-brown: #8E6E5D;
             --deep-brown: #5C4033;
             --sage: #2D5A27;
-            --terracotta: #D4A373; /* Dourado/Cobre */
+            --terracotta: #D4A373;
             --shadow: rgba(92, 64, 51, 0.1);
             
-            /* Cores para "Gracinhas" */
             --highlight-purple: #8e44ad;
-            --step-1-color: #e67e22; /* Laranja */
-            --step-2-color: #27ae60; /* Verde */
-            --step-3-color: #9b59b6; /* Roxo */
+            --step-1-color: #e67e22;
+            --step-2-color: #27ae60;
+            --step-3-color: #9b59b6;
 
-            /* Cores do Badge de Desconto */
             --discount-bg: #D1FAE5;
             --discount-text: #065F46;
         }
@@ -61,11 +55,10 @@
             font-family: 'Montserrat', sans-serif;
             background-color: var(--offwhite);
             color: var(--deep-brown);
-            line-height: 1.5; /* Reduzido levemente global */
+            line-height: 1.5;
             overflow-x: hidden;
         }
 
-        /* Textura de fundo sutil */
         body::before {
             content: '';
             position: fixed;
@@ -96,7 +89,7 @@
             font-family: 'Montserrat', sans-serif;
             font-weight: 700;
             letter-spacing: -0.5px;
-            line-height: 1.2; /* Títulos mais compactos */
+            line-height: 1.2;
         }
 
         .container {
@@ -107,15 +100,14 @@
             z-index: 2;
         }
 
-        /* Header Modificado (Opaco/Blur) */
         header {
             padding: 20px 0;
-            position: fixed; /* Fixo */
+            position: fixed;
             top: 0;
             left: 0;
             width: 100%;
-            background: rgba(255, 251, 247, 0.85); /* Mais opaco */
-            backdrop-filter: blur(12px); /* Blur */
+            background: rgba(255, 251, 247, 0.85);
+            backdrop-filter: blur(12px);
             z-index: 1000;
             border-bottom: 1px solid rgba(142, 110, 93, 0.1);
             box-shadow: 0 4px 20px rgba(0,0,0,0.05);
@@ -165,9 +157,8 @@
             width: 100%;
         }
 
-        /* Hero Section */
         .hero {
-            padding: 160px 0 100px 0; /* Ajuste para header fixo */
+            padding: 160px 0 100px 0;
             text-align: center;
             position: relative;
         }
@@ -204,24 +195,31 @@
             50% { transform: translateY(-20px); }
         }
 
+        .hero-logo {
+            max-width: 700px; /* Ajuste o tamanho conforme necessário */
+            width: 100%;
+            height: auto;
+            margin-bottom: 25px;
+            animation: fadeInUp 1s ease-out;
+            border-radius: 15px; /* Opcional: bordas levemente arredondadas */
+        }
+
         .hero h1 {
             font-size: 58px;
             line-height: 1.1;
             margin-bottom: 25px;
             color: var(--deep-brown);
             animation: fadeInUp 1s ease-out;
-            font-weight: 400; /* MUDANÇA SOLICITADA: Fonte Normal */
+            font-weight: 400;
         }
 
-        /* Destaque Modificado (Sem Roxo, apenas Negrito) */
         .highlight-text {
-            color: var(--deep-brown); /* MUDANÇA SOLICITADA: Cor padrão */
-            font-weight: 800; /* MUDANÇA SOLICITADA: Negrito forte */
+            color: var(--deep-brown);
+            font-weight: 800;
             position: relative;
             display: inline-block;
         }
         
-        /* Sublinhado sutil no destaque para reforçar sem usar roxo */
         .highlight-text::after {
             content: '';
             position: absolute;
@@ -245,13 +243,13 @@
             line-height: 1.4;
         }
 
-        /* --- NOVA PROVA SOCIAL NO HERO --- */
         .social-proof-hero {
             display: flex;
             align-items: center;
             justify-content: center;
             gap: 15px;
-            margin-bottom: 40px;
+            margin-top: 30px; /* Adicionado margem superior pois agora fica em baixo dos botões */
+            margin-bottom: 0;
             animation: fadeInUp 1s ease-out 0.3s;
             animation-fill-mode: backwards;
         }
@@ -265,13 +263,19 @@
             height: 40px;
             border-radius: 50%;
             border: 2px solid var(--offwhite);
-            background-color: #FFD54F; /* Amarelo simula a imagem enviada */
+            background-color: #e0e0e0;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 20px;
-            margin-left: -12px; /* Sobreposição */
+            margin-left: -12px;
             box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            overflow: hidden; /* Para garantir que a imagem não saia do círculo */
+        }
+        
+        .avatar-circle img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
         
         .avatar-circle:first-child { margin-left: 0; }
@@ -300,6 +304,7 @@
             justify-content: center;
             animation: fadeInUp 1s ease-out 0.4s;
             animation-fill-mode: backwards;
+            margin-bottom: 10px; /* Espaço para a prova social abaixo */
         }
 
         .btn-primary, .btn-secondary {
@@ -340,7 +345,6 @@
             color: var(--offwhite);
         }
 
-        /* Problem Section */
         .problem-section {
             padding: 80px 0;
             background: #F4EFEC;
@@ -382,7 +386,6 @@
         .problem-card h3 { font-size: 22px; margin-bottom: 10px; color: var(--deep-brown); font-weight: 700; }
         .problem-card p { font-size: 15px; color: var(--warm-brown); line-height: 1.5; font-weight: 500; }
 
-        /* --- SEÇÃO: COMO FUNCIONA O APP --- */
         .how-it-works-section {
             padding: 100px 0;
             background: #fff;
@@ -431,30 +434,33 @@
             color: var(--warm-brown);
         }
 
-        /* GIF Preview Area - MODIFICADO CONFORME SOLICITADO */
         .app-preview-container {
             margin-top: 40px;
-            background: transparent; /* Removido fundo creme e quadrado */
+            background: transparent;
             border-radius: 0;
-            padding: 0; /* Removido padding interno */
-            border: none; /* Removida borda tracejada */
+            padding: 0;
+            border: none;
             text-align: center;
-            width: 100%; /* Preencher a largura */
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
             min-height: auto;
         }
         
-        .app-preview-container img {
-            width: 100%; /* Ocupa a largura total disponível */
-            max-width: 600px; /* Limite para Desktop */
-            height: auto;
-            border-radius: 20px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Sombra melhorada */
-        }
+        /* Modificado para ser iframe e parecer um celular */
+        /* Modificado para encaixar perfeitamente e sem bordas pretas */
+.app-preview-container iframe {
+    width: 100%;
+    max-width: 350px; /* Largura ideal */
+    aspect-ratio: 9 / 16; /* O SEGREDO: Força a proporção exata de Shorts */
+    height: auto;    /* A altura se ajusta sozinha baseada na largura */
+    border-radius: 30px; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+    background-color: #000;
+    display: block; /* Garante que não tenha espaços extras */
+}
 
-        /* Solution Section */
         .solution-section { padding: 100px 0; }
         .solution-intro { text-align: center; max-width: 800px; margin: 0 auto 80px; }
         .solution-intro h2 { font-size: 42px; margin-bottom: 20px; color: var(--deep-brown); font-weight: 800; }
@@ -487,7 +493,6 @@
         .feature-card h3 { font-size: 22px; margin-bottom: 12px; color: var(--deep-brown); font-weight: 700; }
         .feature-card p { font-size: 15px; color: var(--warm-brown); line-height: 1.5; font-weight: 500; }
 
-        /* Benefits Section */
         .benefits-section { padding: 100px 0; background: var(--cream); }
         .benefits-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; margin-top: 60px; }
         .benefit-item {
@@ -505,7 +510,6 @@
         .benefit-content h4 { font-size: 17px; margin-bottom: 5px; color: var(--deep-brown); font-weight: 700; }
         .benefit-content p { font-size: 13px; color: var(--warm-brown); font-weight: 500; }
 
-        /* Pricing Section */
         .pricing-section { padding: 120px 0; }
         .pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-top: 60px; }
         .pricing-card {
@@ -553,7 +557,6 @@
         .plan-price { font-size: 48px; font-weight: 800; color: var(--deep-brown); margin-bottom: 5px; }
         .plan-period { font-size: 14px; color: var(--warm-brown); margin-bottom: 25px; font-weight: 500; }
         
-        /* NOVO: Badge de Desconto (Verdinho) */
         .discount-badge {
             background-color: var(--discount-bg);
             color: var(--discount-text);
@@ -588,7 +591,6 @@
         }
         .btn-plan:hover { background: var(--terracotta); transform: translateY(-3px); box-shadow: 0 10px 30px rgba(92, 64, 51, 0.2); color: var(--deep-brown); }
 
-        /* Botão Dúvidas */
         .btn-doubt {
             display: inline-flex;
             align-items: center;
@@ -607,7 +609,6 @@
             background: rgba(139, 115, 85, 0.1);
         }
 
-        /* FAQ Section (Accordion) */
         .faq-section {
             padding: 80px 0;
             background: var(--cream);
@@ -679,22 +680,20 @@
         }
 
         .accordion-body {
-            padding: 0 25px 25px 60px; /* Alinhado com o texto da pergunta */
+            padding: 0 25px 25px 60px;
             font-size: 15px;
             color: var(--warm-brown);
             line-height: 1.6;
         }
 
-        /* Estado Aberto */
         .accordion-item.active .toggle-icon {
-            transform: rotate(45deg); /* Vira um X ou use content replace no JS */
+            transform: rotate(45deg);
         }
         
         .accordion-item.active .question-text {
             color: var(--highlight-purple);
         }
 
-        /* Testimonials Section */
         .testimonials-section { padding: 100px 0; background: #fff; }
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; margin-top: 60px; }
         .testimonial-card {
@@ -721,42 +720,6 @@
         .author-info h4 { font-size: 16px; color: var(--deep-brown); margin-bottom: 3px; font-weight: 700; }
         .author-info p { font-size: 13px; color: var(--warm-brown); font-style: italic; }
 
-        /* Novo CTA Final */
-        .final-cta-section {
-            padding: 100px 0;
-            text-align: center;
-            background: linear-gradient(135deg, var(--terracotta) 0%, var(--deep-brown) 100%);
-            color: var(--offwhite);
-            position: relative;
-        }
-
-        .final-cta-content h2 {
-            font-size: 42px;
-            margin-bottom: 20px;
-            font-weight: 800;
-        }
-
-        .final-cta-content p {
-            font-size: 20px;
-            margin-bottom: 40px;
-            opacity: 0.95;
-            font-weight: 500;
-        }
-
-        .final-cta-content .btn-primary {
-            background: var(--offwhite);
-            color: var(--deep-brown);
-            font-size: 20px;
-            padding: 20px 60px;
-        }
-        
-        .final-cta-content .btn-primary:hover {
-            background: var(--cream);
-            color: var(--deep-brown);
-            box-shadow: 0 10px 40px rgba(0,0,0,0.25);
-        }
-
-        /* Footer */
         footer { background: var(--deep-brown); color: var(--offwhite); padding: 80px 0 30px; }
         .footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px; }
         .footer-section h3 { font-size: 20px; margin-bottom: 15px; color: var(--terracotta); font-weight: 800; }
@@ -767,9 +730,8 @@
         .footer-links a:hover { opacity: 1; color: var(--terracotta); }
         .footer-bottom { text-align: center; padding-top: 30px; border-top: 1px solid rgba(255, 255, 255, 0.1); opacity: 0.7; font-size: 13px; }
 
-        /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 32px; /* Fonte reduzida para mobile */ }
+            .hero h1 { font-size: 32px; }
             .hero-subtitle { font-size: 18px; }
             .section-title { font-size: 32px; }
             .cta-buttons { flex-direction: column; }
@@ -778,7 +740,6 @@
             .features-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
             .how-it-works-grid { gap: 30px; }
             .step-item { flex-direction: column; align-items: center; text-align: center; }
-            /* Ajuste Prova Social Mobile */
             .social-proof-hero { flex-direction: column; gap: 10px; }
             .social-text { text-align: center; }
         }
@@ -804,30 +765,32 @@
 
     <section id="inicio" class="hero">
         <div class="container">
+            <img src="https://media.discordapp.net/attachments/1436928411938455594/1466975951446609972/763ff71bcfadc225c50fa6bd1619c55f_1768108315.png?ex=697eb351&is=697d61d1&hm=564818fe7d9869a6e77ab2b1fd47028c20fc255c662624aeeb471c9a94b42fe7&=&format=webp&quality=lossless&width=960&height=960" alt="Logo" class="hero-logo">
+
             <h1>Crie Peças de Crochê que <span class="highlight-text">Realmente Vendem</span></h1>
             
             <p class="hero-subtitle">Modelos exclusivos, tendências do mercado e diagramas facilitados<br>tudo em um só aplicativo</p>
             
+            <div class="cta-buttons">
+                <a href="#problemas" class="btn-primary">Começar Agora</a>
+                <a href="#problemas" class="btn-secondary">Ver Como Funciona</a>
+            </div>
+
             <div class="social-proof-hero">
                 <div class="social-avatars">
-                    <div class="avatar-circle"><i class="fa-solid fa-face-smile"></i></div>
-                    <div class="avatar-circle"><i class="fa-solid fa-face-smile-wink"></i></div>
-                    <div class="avatar-circle"><i class="fa-solid fa-face-grin-hearts"></i></div>
-                    <div class="avatar-circle"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                    <div class="avatar-circle"><img src="https://images-ext-1.discordapp.net/external/lYkrz9v6kjlWT5yKWwL0nmlF52uHwi8qp6o5aAG5hO8/https/thispersondoesnotexist.com?format=webp&width=960&height=960" alt="Cliente 1"></div>
+                    <div class="avatar-circle"><img src="https://this-person-does-not-exist.com/img/avatar-gen7262bb283c0a1172a0381ee00d9d6ddf.jpg" alt="Cliente 2"></div>
+                    <div class="avatar-circle"><img src="https://this-person-does-not-exist.com/img/avatar-genb2b480cdef5fa167d7deb67c5b443e43.jpg" alt="Cliente 3"></div>
+                    <div class="avatar-circle"><img src="https://this-person-does-not-exist.com/img/avatar-gen83f16a749afe6515790cc18596a8c960.jpg" alt="Cliente 4"></div>
                 </div>
                 <div class="social-text">
                     <strong>+1000 crocheteiras</strong><br>já transformaram seu hobby
                 </div>
             </div>
-
-            <div class="cta-buttons">
-                <a href="#planos" class="btn-primary">Começar Agora</a>
-                <a href="#como-funciona" class="btn-secondary">Ver Como Funciona</a>
-            </div>
         </div>
     </section>
 
-    <section class="problem-section">
+    <section id="problemas" class="problem-section">
         <div class="container">
             <h2 class="section-title">Você Cria, mas Não Vende?</h2>
             <p class="section-subtitle">Sabemos exatamente o que você está enfrentando</p>
@@ -883,8 +846,14 @@
             </div>
 
             <div class="app-preview-container">
-                <p style="color: var(--warm-brown); font-weight: 900;"><img src=https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdrbmphNzEydWU3cHdhNjM2eXJlbGsxOG1pa3l4Z2M4eXA5Z2QxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2GJtcrUygyDkwcIVPs/giphy.gif></p>
-                </div>
+                <iframe 
+                    src="https://www.youtube.com/embed/epi-V0VPA2A?autoplay=1&mute=1&loop=1&playlist=epi-V0VPA2A&controls=0&rel=0" 
+                    title="Vídeo do App" 
+                    frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                    allowfullscreen>
+        </iframe>
+            </div>
         </div>
     </section>
 
@@ -1206,16 +1175,6 @@
         </div>
     </section>
 
-    <section class="final-cta-section">
-        <div class="container">
-            <div class="final-cta-content">
-                <h2>Comece a Criar Peças que Vendem Hoje</h2>
-                <p>Junte-se a centenas de crocheteiras que transformaram<br>sua paixão em um negócio lucrativo</p>
-                <a href="#planos" class="btn-primary">Quero Meu Acesso Agora</a>
-            </div>
-        </div>
-    </section>
-
     <footer>
         <div class="container">
             <div class="footer-content">
@@ -1259,7 +1218,6 @@
     </footer>
 
     <script>
-        // Animação de fade-in ao scroll
         const observerOptions = {
             threshold: 0.1,
             rootMargin: '0px 0px -50px 0px'
@@ -1281,7 +1239,6 @@
             observer.observe(el);
         });
 
-        // Lógica do Acordeão FAQ
         const accordionHeaders = document.querySelectorAll('.accordion-header');
 
         accordionHeaders.forEach(header => {
@@ -1290,7 +1247,6 @@
                 const accordionContent = header.nextElementSibling;
                 const icon = header.querySelector('.toggle-icon');
 
-                // Fecha outros itens
                 document.querySelectorAll('.accordion-item').forEach(item => {
                     if (item !== accordionItem && item.classList.contains('active')) {
                         item.classList.remove('active');
@@ -1300,7 +1256,6 @@
                     }
                 });
 
-                // Alterna o item atual
                 accordionItem.classList.toggle('active');
 
                 if (accordionItem.classList.contains('active')) {
