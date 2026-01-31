@@ -27,6 +27,10 @@
             --step-1-color: #e67e22; /* Laranja */
             --step-2-color: #27ae60; /* Verde */
             --step-3-color: #9b59b6; /* Roxo */
+
+            /* Cores do Badge de Desconto */
+            --discount-bg: #D1FAE5;
+            --discount-text: #065F46;
         }
 
         * {
@@ -183,29 +187,88 @@
         }
 
         .hero h1 {
-            font-size: 60px;
-            line-height: 1.1; /* Reduzido conforme solicitado */
+            font-size: 58px;
+            line-height: 1.1;
             margin-bottom: 25px;
             color: var(--deep-brown);
             animation: fadeInUp 1s ease-out;
-            font-weight: 800;
+            font-weight: 400; /* MUDANÇA SOLICITADA: Fonte Normal */
         }
 
-        /* Destaque Roxo */
+        /* Destaque Modificado (Sem Roxo, apenas Negrito) */
         .highlight-text {
-            color: var(--highlight-purple);
+            color: var(--deep-brown); /* MUDANÇA SOLICITADA: Cor padrão */
+            font-weight: 800; /* MUDANÇA SOLICITADA: Negrito forte */
             position: relative;
             display: inline-block;
+        }
+        
+        /* Sublinhado sutil no destaque para reforçar sem usar roxo */
+        .highlight-text::after {
+            content: '';
+            position: absolute;
+            bottom: 2px;
+            left: 0;
+            width: 100%;
+            height: 8px;
+            background-color: var(--terracotta);
+            opacity: 0.2;
+            z-index: -1;
+            border-radius: 4px;
         }
 
         .hero-subtitle {
             font-size: 22px;
             color: var(--warm-brown);
-            margin-bottom: 40px;
+            margin-bottom: 20px;
             font-weight: 500;
             animation: fadeInUp 1s ease-out 0.2s;
             animation-fill-mode: backwards;
             line-height: 1.4;
+        }
+
+        /* --- NOVA PROVA SOCIAL NO HERO --- */
+        .social-proof-hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 40px;
+            animation: fadeInUp 1s ease-out 0.3s;
+            animation-fill-mode: backwards;
+        }
+
+        .social-avatars {
+            display: flex;
+        }
+
+        .avatar-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid var(--offwhite);
+            background-color: #FFD54F; /* Amarelo simula a imagem enviada */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            margin-left: -12px; /* Sobreposição */
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        
+        .avatar-circle:first-child { margin-left: 0; }
+
+        .social-text {
+            text-align: left;
+            font-size: 14px;
+            color: var(--warm-brown);
+            line-height: 1.2;
+        }
+
+        .social-text strong {
+            color: var(--deep-brown);
+            font-weight: 800;
+            font-size: 15px;
         }
 
         @keyframes fadeInUp {
@@ -301,7 +364,7 @@
         .problem-card h3 { font-size: 22px; margin-bottom: 10px; color: var(--deep-brown); font-weight: 700; }
         .problem-card p { font-size: 15px; color: var(--warm-brown); line-height: 1.5; font-weight: 500; }
 
-        /* --- NOVA SEÇÃO: COMO FUNCIONA O APP --- */
+        /* --- SEÇÃO: COMO FUNCIONA O APP --- */
         .how-it-works-section {
             padding: 100px 0;
             background: #fff;
@@ -358,7 +421,7 @@
             padding: 20px;
             border: 2px dashed var(--terracotta);
             text-align: center;
-            max-width: 600px;
+            max-width: 900px;
             margin-left: auto;
             margin-right: auto;
             min-height: 400px;
@@ -472,6 +535,20 @@
         .plan-name { font-size: 24px; margin-bottom: 10px; color: var(--deep-brown); font-weight: 700; }
         .plan-price { font-size: 48px; font-weight: 800; color: var(--deep-brown); margin-bottom: 5px; }
         .plan-period { font-size: 14px; color: var(--warm-brown); margin-bottom: 25px; font-weight: 500; }
+        
+        /* NOVO: Badge de Desconto (Verdinho) */
+        .discount-badge {
+            background-color: var(--discount-bg);
+            color: var(--discount-text);
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+        }
+
         .plan-features { list-style: none; margin-bottom: 30px; text-align: left; }
         .plan-features li { padding: 10px 0; border-bottom: 1px solid rgba(139, 115, 85, 0.1); font-size: 14px; color: var(--warm-brown); display: flex; align-items: center; gap: 10px; font-weight: 600; }
         .plan-features li::before { content: '\f00c'; font-family: "Font Awesome 6 Free"; font-weight: 900; color: var(--sage); font-size: 14px; }
@@ -675,7 +752,7 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
+            .hero h1 { font-size: 32px; /* Fonte reduzida para mobile */ }
             .hero-subtitle { font-size: 18px; }
             .section-title { font-size: 32px; }
             .cta-buttons { flex-direction: column; }
@@ -684,6 +761,9 @@
             .features-grid, .pricing-grid, .testimonials-grid { grid-template-columns: 1fr; }
             .how-it-works-grid { gap: 30px; }
             .step-item { flex-direction: column; align-items: center; text-align: center; }
+            /* Ajuste Prova Social Mobile */
+            .social-proof-hero { flex-direction: column; gap: 10px; }
+            .social-text { text-align: center; }
         }
 
         html { scroll-behavior: smooth; }
@@ -707,9 +787,22 @@
 
     <section id="inicio" class="hero">
         <div class="container">
-            <h1>Crie Peças de Crochê<br>que <span class="highlight-text">Realmente Vendem</span></h1>
+            <h1>Crie Peças de Crochê que <span class="highlight-text">Realmente Vendem</span></h1>
+            
             <p class="hero-subtitle">Modelos exclusivos, tendências do mercado e diagramas facilitados<br>tudo em um só aplicativo</p>
             
+            <div class="social-proof-hero">
+                <div class="social-avatars">
+                    <div class="avatar-circle"><i class="fa-solid fa-face-smile"></i></div>
+                    <div class="avatar-circle"><i class="fa-solid fa-face-smile-wink"></i></div>
+                    <div class="avatar-circle"><i class="fa-solid fa-face-grin-hearts"></i></div>
+                    <div class="avatar-circle"><i class="fa-solid fa-face-laugh-beam"></i></div>
+                </div>
+                <div class="social-text">
+                    <strong>+1000 crocheteiras</strong><br>já transformaram seu hobby
+                </div>
+            </div>
+
             <div class="cta-buttons">
                 <a href="#planos" class="btn-primary">Começar Agora</a>
                 <a href="#como-funciona" class="btn-secondary">Ver Como Funciona</a>
@@ -773,7 +866,7 @@
             </div>
 
             <div class="app-preview-container">
-                <p style="color: var(--warm-brown); font-weight: 600;">[GIF DO APP SENDO USADO AQUI]</p>
+                <p style="color: var(--warm-brown); font-weight: 900;"><img src=https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2MxcHJ5cWk2bWcwZ2cxc2tzeTFsb3J3bTA2dGlsZ2ppMTg5cGxsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TTjVLy6zHbwncTB5lb/giphy.gif></p>
                 </div>
         </div>
     </section>
@@ -912,7 +1005,7 @@
                         <li>Suporte prioritário</li>
                     </ul>
 
-                    <a href="#" class="btn-plan">Começar Agora</a>
+                    <a href="https://seulink.com/checkout-mensal" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
@@ -923,6 +1016,8 @@
                     <div class="plan-price">R$ 127</div>
                     <p class="plan-period">a cada 3 meses · R$ 42,33/mês</p>
                     
+                    <div class="discount-badge">+R$ 14,00 DE DESCONTO</div>
+
                     <ul class="plan-features">
                         <li>20 modelos exclusivos por mês</li>
                         <li>Tendências de mercado</li>
@@ -932,7 +1027,7 @@
                         <li>Suporte prioritário</li>
                     </ul>
 
-                    <a href="#" class="btn-plan">Começar Agora</a>
+                    <a href="https://seulink.com/checkout-trimestral" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
@@ -943,6 +1038,8 @@
                     <div class="plan-price">R$ 197</div>
                     <p class="plan-period">pagamento único · acesso para sempre</p>
                     
+                    <div class="discount-badge">+R$ 367,00 DE DESCONTO</div>
+
                     <ul class="plan-features">
                         <li>20 modelos exclusivos por mês</li>
                         <li>Tendências de mercado</li>
@@ -953,7 +1050,7 @@
                         <li>Acesso vitalício garantido</li>
                     </ul>
 
-                    <a href="#" class="btn-plan">Começar Agora</a>
+                    <a href="https://seulink.com/checkout-vitalicio" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
@@ -1167,7 +1264,7 @@
                     entry.target.style.opacity = '1';
                     entry.target.style.transform = 'translateY(0)';
                 }
-            });
+            }); 
         }, observerOptions);
 
         document.querySelectorAll('.feature-card, .benefit-item, .pricing-card, .testimonial-card, .step-item').forEach(el => {
