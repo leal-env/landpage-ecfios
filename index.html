@@ -3,13 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Encanto em Fios - Modelos Exclusivos de Crochê que Vendem</title>
+    <title>Encanto em Fios</title>
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1588924362118875');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1588924362118875&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
 
     <style>
         :root {
@@ -413,28 +431,27 @@
             color: var(--warm-brown);
         }
 
-        /* GIF Preview Area */
+        /* GIF Preview Area - MODIFICADO CONFORME SOLICITADO */
         .app-preview-container {
-            margin-top: 60px;
-            background: var(--cream);
-            border-radius: 30px;
-            padding: 20px;
-            border: 2px dashed var(--terracotta);
+            margin-top: 40px;
+            background: transparent; /* Removido fundo creme e quadrado */
+            border-radius: 0;
+            padding: 0; /* Removido padding interno */
+            border: none; /* Removida borda tracejada */
             text-align: center;
-            max-width: 900px;
-            margin-left: auto;
-            margin-right: auto;
-            min-height: 400px;
+            width: 100%; /* Preencher a largura */
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            min-height: auto;
         }
         
         .app-preview-container img {
-            max-width: 100%;
+            width: 100%; /* Ocupa a largura total disponível */
+            max-width: 600px; /* Limite para Desktop */
+            height: auto;
             border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* Sombra melhorada */
         }
 
         /* Solution Section */
@@ -866,7 +883,7 @@
             </div>
 
             <div class="app-preview-container">
-                <p style="color: var(--warm-brown); font-weight: 900;"><img src=https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExb2MxcHJ5cWk2bWcwZ2cxc2tzeTFsb3J3bTA2dGlsZ2ppMTg5cGxsbyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TTjVLy6zHbwncTB5lb/giphy.gif></p>
+                <p style="color: var(--warm-brown); font-weight: 900;"><img src=https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmdrbmphNzEydWU3cHdhNjM2eXJlbGsxOG1pa3l4Z2M4eXA5Z2QxZCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/2GJtcrUygyDkwcIVPs/giphy.gif></p>
                 </div>
         </div>
     </section>
@@ -995,17 +1012,20 @@
                     <h3 class="plan-name">Mensal</h3>
                     <div class="plan-price">R$ 47</div>
                     <p class="plan-period">por mês</p>
+
+                    <div class="discount-badge">+R$ 50,00 DE DESCONTO</div>
                     
                     <ul class="plan-features">
-                        <li>20 modelos exclusivos por mês</li>
+                        <li>20 modelos exclusivos por semana</li>
                         <li>Tendências de mercado</li>
                         <li>Diagramas facilitados</li>
                         <li>Gerador automático de receitas</li>
                         <li>Grupo de parceiras</li>
                         <li>Suporte prioritário</li>
+                        <li>Acesso a +120 Receitas</li>
                     </ul>
 
-                    <a href="https://seulink.com/checkout-mensal" class="btn-plan">Começar Agora</a>
+                    <a href="https://pay.cakto.com.br/39noogb" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
@@ -1013,44 +1033,46 @@
 
                 <div class="pricing-card popular">
                     <h3 class="plan-name">Trimestral</h3>
-                    <div class="plan-price">R$ 127</div>
-                    <p class="plan-period">a cada 3 meses · R$ 42,33/mês</p>
+                    <div class="plan-price">R$ 107</div>
+                    <p class="plan-period">a cada 3 meses · R$ 35,37/mês</p>
                     
-                    <div class="discount-badge">+R$ 14,00 DE DESCONTO</div>
+                    <div class="discount-badge">+R$ 85,00 DE DESCONTO</div>
 
                     <ul class="plan-features">
-                        <li>20 modelos exclusivos por mês</li>
+                        <li>20 modelos exclusivos por semana</li>
                         <li>Tendências de mercado</li>
                         <li>Diagramas facilitados</li>
                         <li>Gerador automático de receitas</li>
                         <li>Grupo de parceiras</li>
                         <li>Suporte prioritário</li>
+                        <li>Acesso a +120 Receitas</li>
                     </ul>
 
-                    <a href="https://seulink.com/checkout-trimestral" class="btn-plan">Começar Agora</a>
+                    <a href="https://pay.cakto.com.br/gsxayro" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
                 </div>
 
                 <div class="pricing-card best-value">
-                    <h3 class="plan-name">Vitalício</h3>
+                    <h3 class="plan-name">Anual</h3>
                     <div class="plan-price">R$ 197</div>
-                    <p class="plan-period">pagamento único · acesso para sempre</p>
+                    <p class="plan-period">a cada 12 meses · R$ 16,41/mês</p>
                     
-                    <div class="discount-badge">+R$ 367,00 DE DESCONTO</div>
+                    <div class="discount-badge">+R$ 267,00 DE DESCONTO</div>
 
                     <ul class="plan-features">
-                        <li>20 modelos exclusivos por mês</li>
+                        <li>20 modelos exclusivos por semana</li>
                         <li>Tendências de mercado</li>
                         <li>Diagramas facilitados</li>
                         <li>Gerador automático de receitas</li>
                         <li>Grupo de parceiras</li>
                         <li>Suporte prioritário</li>
-                        <li>Acesso vitalício garantido</li>
+                        <li>Desconto de +70%</li>
+                        <li>Acesso a +120 Receitas</li>
                     </ul>
 
-                    <a href="https://seulink.com/checkout-vitalicio" class="btn-plan">Começar Agora</a>
+                    <a href="https://pay.cakto.com.br/u54iuy8" class="btn-plan">Começar Agora</a>
                     <a href="#faq" class="btn-doubt">
                         <i class="fa-regular fa-circle-question"></i> Dúvidas
                     </a>
@@ -1075,7 +1097,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Sim! Funciona perfeitamente em iPhone (iOS) e Android. Baixe na loja de aplicativos e use também em tablet ou computador.
+                            Sim! Funciona perfeitamente em qualquer tipo de telefone ou dispositivo eletronico.
                         </div>
                     </div>
                 </div>
@@ -1090,22 +1112,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Não! Foi feito para ser intuitivo. Botões grandes e claros. Se você usa WhatsApp, consegue usar o Encanto em Fios.
-                        </div>
-                    </div>
-                </div>
-
-                <div class="accordion-item">
-                    <button class="accordion-header">
-                        <span class="question-text">
-                            <i class="fa-solid fa-credit-card question-icon"></i>
-                            Preciso pagar mensalidade?
-                        </span>
-                        <i class="fa-solid fa-plus toggle-icon"></i>
-                    </button>
-                    <div class="accordion-content">
-                        <div class="accordion-body">
-                            NÃO! É pagamento ÚNICO. Você paga uma vez e tem acesso vitalício, sem taxas extras.
+                            Não! Se você souber usar o Whatsapp você vai saber usar o aplicativo pois ele e muito simples e criado para ser fácil.
                         </div>
                     </div>
                 </div>
@@ -1120,7 +1127,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Após a confirmação do pagamento, você recebe um e-mail com o link para baixar e seus dados de acesso. É imediato no cartão/PIX.
+                            Após a confirmação do pagamento, você recebe no E-mail ou Whatsapp o link para acessar. É  <strong>imediato</strong> no Cartão ou PIX.
                         </div>
                     </div>
                 </div>
@@ -1128,14 +1135,14 @@
                 <div class="accordion-item">
                     <button class="accordion-header">
                         <span class="question-text">
-                            <i class="fa-solid fa-robot question-icon"></i>
-                            As receitas do gerador automático são boas?
+                            <i class="fa-solid fa-wand-magic-sparkles question-icon"></i>
+                            Quantas receitas vou ter acesso?
                         </span>
                         <i class="fa-solid fa-plus toggle-icon"></i>
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Sim! Nosso sistema foi desenvolvido com milhares de receitas validadas. Elas seguem técnicas corretas e ajudam você a criar peças incríveis.
+                            Você terá acesso a 20 receitas toda semana no aplicativo + um catalogo de 120 receitas.
                         </div>
                     </div>
                 </div>
@@ -1150,7 +1157,7 @@
                     </button>
                     <div class="accordion-content">
                         <div class="accordion-body">
-                            Você tem 7 dias de garantia incondicional. Se não gostar, devolvemos 100% do seu dinheiro sem perguntas.
+                            Você tem <strong>7 dias de garantia incondicional</strong>. Se não gostar, <strong>devolvemos 100% do seu dinheiro sem perguntas.</strong>
                         </div>
                     </div>
                 </div>
